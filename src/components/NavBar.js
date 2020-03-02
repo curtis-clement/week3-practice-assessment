@@ -1,23 +1,24 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 export default function NavBar() {
   return (
     <nav className='nav'>
       <ul className='nav-links'>
-        <Link to='/' >
+        <NavLink to='/' exact activeStyle={{fontWeight: 'bold'}}>
         <li>Home</li>
-        </Link>
-        <Link to='/patientSignUp' >
+        </NavLink>
+        <NavLink to='/patientSignUp' activeStyle={{fontWeight: 'bold'}}>
         <li>New Patient</li>
-        </Link>
-        <Link to='/onDuty' >
+        </NavLink>
+        <NavLink to='/onDuty' activeStyle={{fontWeight: 'bold'}}>
         <li>On Duty</li>
-        </Link>
-        <Link to='/doctorPortal' >
+        </NavLink>
+        <NavLink to='/doctorPortal' activeStyle={{fontWeight: 'bold'}}>
         <li>Doctors Portal</li>
-        </Link>
+        </NavLink>
       </ul>
     </nav>
   );
 }
+
