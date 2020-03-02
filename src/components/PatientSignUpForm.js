@@ -1,23 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
+import useForm from 'react-hook-form';
 
-export default function PatientSignUpForm(props) {
-  const [patientInfo, setPatientInfo] = useState("")
+export default function PatientSignUpForm() {
+  const {register, handleSubmit, errors} = useForm();
 
-  function handleChange(event) {
-    setPatientInfo(event.target.value)
+  const onSubmit = (data) => {
+    console.log(data);
   }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    props.addPatient()
-  }
-
+  
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>First Name:</label>
-        <input value={patientInfo} onChange={handleChange}/>
-        <input type='Submit' />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input type='text' placeholder='Type first name here' name='First Name' ref={register}/>
+        <input type='text' placeholder='Type last name here' name='Last Name' ref={register}/>
+        <input type='text' placeholder='Type email Here' name='email' ref={register}/>
+        <input type='text' placeholder='Type phone number here' name='phone' ref={register}/>
+        <input type='text' placeholder='Gender' name='Gender' ref={register}/>
+        <input type='text' placeholder='DoB' name='DoB' ref={register}/>
       </form>
     </div>
   );

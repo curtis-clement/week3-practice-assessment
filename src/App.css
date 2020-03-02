@@ -11,6 +11,10 @@
   color: #404a4a;
 }
 
+.ul {
+  list-style: none;
+}
+
 .nav-links {
   width: 100%;
   display: flex;
