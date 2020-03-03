@@ -14,10 +14,11 @@ export default function PatientInfo(props) {
       Patient Id: {props.id} <br/>
       Name: {props.lastname}, {props.firstname}<br/>
       Date of Birth: {props.dateofbirth}</p>
-      <p>{detailState && `Email: ${props.email}`}</p>
-      <p>{detailState && `Phone: ${props.phone}`}</p>
-      <p>{detailState && `Prescriptions: ${props.prescriptions}`}</p>
-      <p>{detailState && `Doctor Id: ${props.doctorid}`}</p>
+      <p>{detailState && `Gender: ${props.gender}`} <br/>
+      {detailState && `Email: ${props.email}`} <br/>
+      {detailState && `Phone: ${props.phone}`} <br/>
+      {detailState && `Prescriptions: ${props.prescriptions}`} <br/>
+      {detailState && `Doctor Id: ${props.doctorid}`}</p>
       <button onClick={details}>Show Patient Details</button>
     </div>
   )
