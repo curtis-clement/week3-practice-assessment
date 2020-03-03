@@ -40,7 +40,7 @@ export default function DoctorPatientPortal() {
       : patientsSorted.filter(
           patient => patient.doctorId === parseInt(provider)
         );
-
+ 
   return (
     <div>
       <p>Patient Portal</p>
