@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 export default function PatientInfo(props) {
 
   const [detailState, setDetailState] = useState(false) 
-  console.log(detailState)
 
   function details() {
     setDetailState(!detailState);
