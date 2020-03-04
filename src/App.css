@@ -1,18 +1,23 @@
 .App {
   text-align: center;
+  background-color: rgb(185, 205, 225);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 12vh;
   background-color: aquamarine;
   color: #404a4a;
+  list-style: none
 }
 
 .ul {
-  list-style: none;
+  list-style: none
 }
 
 .nav-links {

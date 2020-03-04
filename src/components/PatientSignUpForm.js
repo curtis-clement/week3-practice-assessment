@@ -13,6 +13,7 @@ export default function Form(props) {
     event.preventDefault()
     props.showNewPatient(firstName, lastName, email, phone, gender, DoB)
   };
+  console.log(submitInfo)
 
   return (
     <div>
